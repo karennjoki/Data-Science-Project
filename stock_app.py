@@ -40,7 +40,7 @@ st.write('The Dataset has: ' + str(tickerDf.shape[0]) + ' rows and ' + str(ticke
 st.write(tickerDf.head(10))
 st.markdown(f'<h1 style="color:#062a78;font-size:24px;">{"Closing Price by Month"}</h1>', unsafe_allow_html=True)
 st.line_chart(tickerDf.Close)
-st.markdown(f'<h1 style="color:#708090;font-size:24px;">{"Volume by Month"}</h1>', unsafe_allow_html=True)
+st.markdown(f'<h1 style="color:#062a78;font-size:24px;">{"Volume by Month"}</h1>', unsafe_allow_html=True)
 st.line_chart(tickerDf.Volume)
 
 #Adding Back-ground
