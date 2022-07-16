@@ -13,7 +13,7 @@ start_date = st.sidebar.date_input("Start Date", datetime.date(2017, 1, 1))
 end_date = st.sidebar.date_input("End Date", datetime.date(2022, 7, 7))
 
 #Ticker Data
-ticker_list = ['AAPL','ZG','IBM','NFLX','CSCO','CRM','MSFT','GOOGL','TSLA','AMZN', 'META', 'NVDA', 'BABA', 'INT', 'PYPL', 'YELP']
+ticker_list = ['AAPL','ZG','IBM','NFLX','CSCO','CRM','MSFT','GOOGL','TSLA','AMZN', 'META', 'NVDA', 'BABA', 'PYPL', 'YELP']
 tickerBox = st.sidebar.selectbox('Stock Ticker', ticker_list) # Select ticker symbol
 tickerData = yf.Ticker(tickerBox) # Get ticker data
 tickerDf = tickerData.history(period='1mo', start=start_date, end=end_date) #get the historical prices for this ticker
