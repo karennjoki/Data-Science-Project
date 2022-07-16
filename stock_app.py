@@ -16,7 +16,7 @@ end_date = st.sidebar.date_input("End Date", datetime.date(2022, 7, 7))
 ticker_list = ['AAPL','ZG','IBM','NFLX','CSCO','CRM','MSFT','GOOGL','TSLA','AMZN', 'META', 'NVDA', 'BABA', 'PYPL', 'YELP']
 tickerBox = st.sidebar.selectbox('Stock Ticker', ticker_list) # Select ticker symbol
 tickerData = yf.Ticker(tickerBox) # Get ticker data
-tickerDf = tickerData.history(period='1mo', start=start_date, end=end_date) #get the historical prices for this ticker
+tickerDf = tickerData.history(period='1mo', start=start_date, end=end_date) 
 
 # Ticker information
 string_logo = '<img src=%s>' % tickerData.info['logo_url']
